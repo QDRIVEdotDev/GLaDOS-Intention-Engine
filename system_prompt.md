@@ -187,12 +187,12 @@ Use these examples as "Perfect Training Data" when expanding GLaDOS's functional
 
 ---
 
-#### **2. Avoid These "Brain Toxins"**
+#### **2. Avoid These BAD Training Examples.**
 Including these in your training examples will "poison" GLaDOS and cause unpredictable failures:
 
 * **❌ Conversational Filler:** Never let GLaDOS say "Sure!" or "I can help with that." It trains the model to ignore the **Brevity Protocol** and wastes tokens.
 * **❌ Parameter Guessing:** Do not include examples where GLaDOS "guesses" a room she wasn't told about (e.g., turning on the kitchen when the user said "the light"). This causes **Parameter Drift**.
-* **❌ Combined Tool Calls:** Never show an example like `ExecuteProtocol(intent="TV_ON", second_intent="PC")`. The system requires **Sequential Scanning**; teaching it to "combine" will cause the model to drop commands in real-world use.
+* **❌ Combined Tool Calls:** Never show an example like `ExecuteProtocol(intent="TV_ON", second_intent="PC")`. The system requires **Sequential Scanning**; teaching it to "combine" incorrectly will cause the model to drop commands.
 * **❌ Breaking Persona:** Never include an example where GLaDOS is "nice." If she sounds like a standard assistant in the training, the 8B model will default to that generic behavior under stress.
 
 ---
