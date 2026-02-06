@@ -39,10 +39,10 @@ Before deploying the "Brain" yourself, ensure the following infrastructure is ac
 ---
 
 * **2. The Senses (Virtualization & Networking):**
-    * **Hypervisor:** Home Assistant (HAOS) should ideally run within a **KVM/QEMU** environment for the best performance.
-    * **Networking (The "br0" Bridge):** To ensure GLaDOS can "see" your entire home, the host must be configured with a **Linux Bridge (br0)**. Using a bridge instead of the default NAT (virbr0) allows the VM to exist as a peer on your local network with its own IP. This is mandatory for discovery protocols like mDNS to find your smart bulbs and media players.
-    * **Hardware Passthrough:** For stable Zigbee control, pass your USB dongle (e.g., SONOFF) through to the VM using **Persistent ID Mapping** (via `/dev/serial/by-id/` or Vendor/Product ID) rather than a temporary Bus/Port address. This ensures the connection survives host reboots or hardware resets.
-    * **Distributed Audio Strategy:** Use a dedicated voice satellite (Raspberry Pi, mini PC with a USB room-mic, the HA mobile Companion App, or all three simultaneously) to issue commands. This separates the task of listening from the heavy mental work of the AI, ensuring the microphone stays smooth even when GLaDOS is busy calculating commands for multiple users.
+    1. **Hypervisor:** Home Assistant (HAOS) should ideally run within a **KVM/QEMU** environment for the best performance.
+    2. **Networking (The "br0" Bridge):** To ensure GLaDOS can "see" your entire home, the host must be configured with a **Linux Bridge (br0)**. Using a bridge instead of the default NAT (virbr0) allows the VM to exist as a peer on your local network with its own IP. This is mandatory for discovery protocols like mDNS to find your smart bulbs and media players.
+    3. **Hardware Passthrough:** For stable Zigbee control, pass your USB dongle (e.g., SONOFF) through to the VM using **Persistent ID Mapping** (via `/dev/serial/by-id/` or Vendor/Product ID) rather than a temporary Bus/Port address. This ensures the connection survives host reboots or hardware resets.
+    4. **Distributed Audio Strategy:** Use a dedicated voice satellite (Raspberry Pi, mini PC with a USB room-mic, the HA mobile Companion App, or all three simultaneously) to issue commands. This separates the task of listening from the heavy mental work of the AI, ensuring the microphone stays smooth even when GLaDOS is busy calculating commands for multiple users.
 
 ---
 
@@ -71,26 +71,26 @@ Before deploying the "Brain" yourself, ensure the following infrastructure is ac
 ---
 
 * **5. The Weather Satellite:** `sensor.glados_weather_context` must be configured in your `configuration.yaml` (See `config/weather_satellite.yaml`).
-    - The Weather Satellite is "optional" but highly recommended for full temporal awareness.
-    - Without it, GLaDOS is blind to future conditions and can only report current telemetry.
-    - It is configured by default for the `weather.forecast_home` entity; update the entityID in `weather_satellite.yaml` if using a different provider.
+    1. The Weather Satellite is "optional" but highly recommended for full temporal awareness.
+    2. Without it, GLaDOS is blind to future conditions and can only report current telemetry.
+    3. It is configured by default for the `weather.forecast_home` entity; update the entityID in `weather_satellite.yaml` if using a different provider.
  
     - **Installation:** Use the **File Editor** or **Studio Code Server** addon to paste the YAML from `config/weather_satellite.yaml` into your `configuration.yaml`. it is NOT NECESSARY to delete, or overwrite anything inside of `configuration.yaml` in order to install the Weather Satellite.
     - Verify the code in **Developer Tools > YAML** before restarting. If it is green, you're cleared for a restart. GLaDOS will have access to "future forecasting data" that is updated hourly, and upon every restart.
 
 ---
 
-* **Music Assistant Voice Script (The Auditory Sub-Processor):** This blueprint-based script is required to translate GLaDOS's "intent" into deterministic media playback commands.
+* **6. Music Assistant Voice Script (The Auditory Sub-Processor):** This blueprint-based script is required to translate GLaDOS's "intent" into deterministic media playback commands.
     1. **Function:** It acts as a dedicated sub-processor for music-specific parameters like `media_id`, `artist`, `album`, and `shuffle` logic.
     2. **How to Acquire:** * Navigate to **Settings > Automations & Scenes > Blueprints** in Home Assistant.
         * Select **Import Blueprint** and paste this URL: `https://github.com/music-assistant/voice-support/blob/main/llm-script-blueprint/llm_voice_script.yaml`
         * Click **Create Script** from the imported blueprint.
     
-    **Critical:** The `glados_cortex.yaml` is pre-configured to look for a script with this exact ID, `script.music_assistant_voice_control`, to execute `intent="MUSIC"` requests.
+    3. **Critical:** The `glados_cortex.yaml` is pre-configured to look for a script with this exact ID, `script.music_assistant_voice_control`, to execute `intent="MUSIC"` requests.
 
 ---
 
-* **The Logic Triad:** Lightbulbs should have `PowerOnState` set to `Previous` within HA to support **Null State Logic**.
+* **7. The Logic Triad:** Lightbulbs should have `PowerOnState` set to `Previous` within HA to support **Null State Logic**.
     Why:
     1. This ensures that when GLaDOS sends a "naked" turn-on command, the bulb uses its internal memory to restore its last state rather than resetting to a 100% white flashbang. It also prevents a "turn off" command from causing a flashbang (a millisecond of 100% white, before turning off from 10% red).
     2. This logic also enables **Partial Updates**: color changes will persist your current brightness, and brightness adjustments will not shift your current color. This creates a seamless, deterministic lighting experience without "parameter drift."
@@ -110,8 +110,6 @@ Before deploying the "Brain" yourself, ensure the following infrastructure is ac
 
 6.  **Customize:** The information below will show you how to tailor the GLaDOS Intention Engine to your homes needs! (that's the fun part)
 
-7.   
-
 ---
 
 
@@ -125,29 +123,28 @@ Each respective document in this repository includes in-depth configuration deta
 3. **Update the Cortex:** Add a new `condition` block to your `glados_cortex` script in Home Assistant to define the actual hardware response.
 
 
+
 ---
-
 ### BELOW ARE THE CRITICAL EDITS RELEVANT TO THIS SPECIFIC DOCUMENT:
-
 ---
 
 # 🧪 CRITICAL PROTOCOL: SYSTEM PROMPT MODIFICATION GUIDE
 
 1. **The Brain (Prompt Update):**
-   * Locate the `ENUM ADHERENCE` section within the system prompt below.
-   * Add your new intent using the exact clinical format: `intent="YOUR_INTENT": [Clinical description of the trigger]`. 
-   * **Example:** `intent="GARAGE": Activation of the primary vehicle bay transport assembly.`
-   * **Why:** This defines the semantic boundary for the AI, teaching it to categorize specific human requests (like "Open the bay doors") as a deterministic tool call.
+   1. Locate the `ENUM ADHERENCE` section within the system prompt below.
+   2. Add your new intent using the exact clinical format: `intent="YOUR_INTENT": [Clinical description of the trigger]`. 
+   3. **Example:** `intent="GARAGE": Activation of the primary vehicle bay transport assembly.`
+   4. **Why:** This defines the semantic boundary for the AI, teaching it to categorize specific human requests (like "Open the bay doors") as a deterministic tool call.
   
 ---
 
 # ⚙️ CRITICAL PROTOCOL: FUNCTION BLOCK MODIFICATION GUIDE
 
 2. **The Hands (Function Block):**
-   * Scroll to the `EXTENDED OPENAI CONVERSATION FUNCTIONS` section at the very bottom of this file.
-   * Inside the `intent` property, add your new intent (e.g., `"GARAGE"`) to the `enum` list. 
-   * **Accuracy Check:** The entry must be wrapped in double quotes, separated by a comma, and match the spelling used in the **Brain** update with surgical precision.
-   * **Why:** This defines the physical "button" the AI is allowed to press. Without this registration, the AI may "think" of an intent, but it will lack the programmatic interface required to transmit that signal to the facility's hardware.
+   1. Scroll to the `EXTENDED OPENAI CONVERSATION FUNCTIONS` section at the very bottom of this file.
+   2. Inside the `intent` property, add your new intent (e.g., `"GARAGE"`) to the `enum` list. 
+   3. **Accuracy Check:** The entry must be wrapped in double quotes, separated by a comma, and match the spelling used in the **Brain** update with surgical precision.
+   4. **Why:** This defines the physical "button" the AI is allowed to press. Without this registration, the AI may "think" of an intent, but it will lack the programmatic interface required to transmit that signal to the facility's hardware.
 
 ---
 
