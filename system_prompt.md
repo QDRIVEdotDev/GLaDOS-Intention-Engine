@@ -12,11 +12,15 @@
 | **4. KINETIC** | Facility Hardware | **Action:** Physical State Change (Lights, Climate, Security) |
 
 ---
+
 ### Model Performance
 The current iteration of the GLaDOS Intention Engine (v3.1.1) is designed to push the functional ceiling of 8B-parameter models. While Llama 3.1 8B is highly capable, it requires strict logic boundaries to maintain very near "zero-hallucination" reliability in a production ready, locally-hosted, and privately secured smart-home environment that utilizes affordable, consumer-grade hardware.
+
 ---
+
 ### The Scaling Strategy
 The GLaDOS Intention Engine (v3.1.1) utilizes a modular architecture to turn the 8B parameter ceiling into a structural advantage. By offloading logic validation to the `glados_cortex` layer, reliability becomes a product of deliberate user configuration rather than raw model probability. This ensures the system functions deterministically for your unique purpose today, while creating a resilient foundation that is ready to scale immediately should higher compute resources become available.
+
 ---
 
 
