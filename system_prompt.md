@@ -3,13 +3,29 @@
 
 ---
 
-### System Logic Flow
-| Sequence | System Node | Operational Protocol |
-| :--- | :--- | :--- |
-| **1. INPUT** | Satellite / Whisper | `User Voice` → `Transcribe Audio` → `Text String` |
-| **2. COGNITION** | Local LLM (8B) | **Classify:** Command vs. Conversation<br>**Tool Invocation:** Validate and Apply `ExecuteProtocol`<br>**Serialize:** Generate JSON Payload |
-| **3. CORTEX** | Home Assistant | **Interpret:** Match JSON to Device ID<br>**Trigger:** Fire Zigbee / Script / Wi-Fi<br>**Acknowledge:** Sync Status to Persona |
-| **4. ACTUATION LAYER** | Facility Hardware | **Action:** Physical State Change (Lights, Climate, Security) |
+graph TD
+    %% 1. INPUT LAYER
+    A[<b>1. INPUT</b><br>Satellite / Whisper<br>__________________<br><i>User Voice → Transcribe → Text String</i>]
+    
+    %% 2. COGNITION LAYER
+    B[<b>2. COGNITION</b><br>Local LLM (8B)<br>__________________<br><b>Classify:</b> Command vs. Conversation<br><b>Tool Invocation:</b> Validate & Apply ExecuteProtocol<br><b>Serialize:</b> Generate JSON Payload]
+    
+    %% 3. CORTEX LAYER
+    C[<b>3. CORTEX</b><br>Home Assistant<br>__________________<br><b>Interpret:</b> Match JSON to Device ID<br><b>Trigger:</b> Fire Zigbee / Script / Wi-Fi<br><b>Acknowledge:</b> Sync Status to Persona]
+    
+    %% 4. ACTUATION LAYER
+    D[<b>4. ACTUATION LAYER</b><br>Facility Hardware<br>__________________<br><b>Action:</b> Physical State Change<br><i>Lights, Climate, Security</i>]
+
+    %% Connections
+    A --> B
+    B --> C
+    C --> D
+
+    %% GLaDOS Aesthetics (Dark Mode)
+    style A fill:#232323,stroke:#fff,stroke-width:2px,color:#fff
+    style B fill:#232323,stroke:#fff,stroke-width:2px,color:#fff
+    style C fill:#232323,stroke:#fff,stroke-width:2px,color:#fff
+    style D fill:#232323,stroke:#fff,stroke-width:2px,color:#fff
 
 ---
 
