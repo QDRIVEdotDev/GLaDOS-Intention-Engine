@@ -128,7 +128,8 @@ Before deploying the "Brain" yourself, ensure the following infrastructure is ac
 
 5. **Music Assistant Voice Script** should be installed by following the instructions included above. 
 
-6.  **Customize:** The information below will show you how to tailor the GLaDOS Intention Engine to your homes needs! (that's the fun part)
+6.  **Customize:** The information below will show you how to tailor the GLaDOS Intention Engine to your specific intentions!
+      (that's the fun part)
 
 ---
 
