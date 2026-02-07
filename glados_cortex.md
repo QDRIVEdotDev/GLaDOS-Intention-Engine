@@ -407,5 +407,6 @@ Sometimes GLaDOS will hallucinate parameters that do not exist for a specific de
 *Simplified TL;DR:*
 
 **WHAT ADVICE TO FOLLOW FROM GLADOS IF YOU USE THIS METHOD FOR REPAIRS:** You should only follow her guidance when she suggests a solution that expands the existing intent list within the single `ExecuteProtocol` tool and maps it to a corresponding logic gate within the `glados_cortex` router.
+
 ---
 
