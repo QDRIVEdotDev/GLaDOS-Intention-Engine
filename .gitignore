@@ -205,3 +205,39 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ===================================
+# GLaDOS / HOME ASSISTANT SPECIFIC
+# ===================================
+
+# 1. Critical Security (NEVER UPLOAD)
+secrets.yaml
+auth_token.txt
+*.key
+*.pem
+/tokens/
+
+# 2. Local Databases & History
+*.db
+*.db-shm
+*.db-wal
+home-assistant_v2.db
+zigbee.db
+.storage/
+
+# 3. Local LLM Weights (Too large for GitHub)
+models/*.gguf
+models/*.bin
+models/*.onnx
+# If you keep models in a specific subfolder, ignore it:
+/models/
+
+# 4. OS & Editor Junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 5. Local Logs
+home-assistant.log
+fault_log.log
