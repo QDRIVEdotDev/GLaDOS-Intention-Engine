@@ -1,8 +1,6 @@
 # GLaDOS Intention Engine (v3.1.1)
 > **Facility Readiness Protocol**
 
----
-
 graph TD
     %% 1. INPUT LAYER
     A[<b>1. INPUT</b><br>Satellite / Whisper<br>__________________<br><i>User Voice → Transcribe → Text String</i>]
@@ -26,8 +24,6 @@ graph TD
     style B fill:#232323,stroke:#fff,stroke-width:2px,color:#fff
     style C fill:#232323,stroke:#fff,stroke-width:2px,color:#fff
     style D fill:#232323,stroke:#fff,stroke-width:2px,color:#fff
-
----
 
 
 ### Model Performance
