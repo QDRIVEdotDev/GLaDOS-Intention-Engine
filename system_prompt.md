@@ -157,7 +157,7 @@ Before deploying the "Brain" yourself, ensure the following infrastructure is ac
 ---
 
 
-### 📥 Implementation Instructions (ULTRA SIMPLIFIED VERSION)
+### 📥 TLDR Implementation Instructions (ULTRA SIMPLIFIED VERSION)
 
 1. **System Prompt:** Copy the prompt below (starting at `IDENTITY`, and ending after the `FINAL SYSTEM CHECK` line) into the "Prompt Template" box of your Extended OpenAI Conversation addon.
 
