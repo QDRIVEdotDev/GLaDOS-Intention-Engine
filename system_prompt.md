@@ -228,7 +228,7 @@ Each respective document in this repository includes in-depth configuration deta
 ---
 
 
-### 🧠 CRITICAL PROTOCOL: TRAINING EXAMPLE REFINEMENT
+## 🧠 CRITICAL: TRAINING EXAMPLE REFINEMENT
 
 To ensure that GLaDOS operates correctly, your training examples must model the exact deterministic behavior you want to see as a result. Follow these blueprints for good training examples, and try to avoid the "neuro-toxins" that degrade her cognitive performance in the poor training examples also shown below.
 
