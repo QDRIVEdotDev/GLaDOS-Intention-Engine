@@ -91,7 +91,8 @@ Before deploying the "Brain" yourself, ensure the following infrastructure is ac
     3. It is configured by default for the `weather.forecast_home` entity; update the entityID in `weather_satellite.yaml` if using a different provider.
  
     - **Installation:** Use the **File Editor** or **Studio Code Server** addon to paste the YAML from `config/weather_satellite.yaml` into your `configuration.yaml`. it is NOT NECESSARY to delete, or overwrite anything inside of `configuration.yaml` in order to install the Weather Satellite.
-    - Verify the code in **Developer Tools > YAML** before restarting. If it is green, you're cleared for a restart. GLaDOS will have access to "future forecasting data" that is updated hourly, and upon every restart.
+    
+    ***CRITICAL:*** Verify the code in **Developer Tools > YAML** before restarting. If it is green, you're cleared for a restart. GLaDOS will have access to "future forecasting data" that is updated hourly, and upon every restart.
 
 ---
 
@@ -103,12 +104,13 @@ Before deploying the "Brain" yourself, ensure the following infrastructure is ac
         * Select **Import Blueprint** and paste this URL: `https://github.com/music-assistant/voice-support/blob/main/llm-script-blueprint/llm_voice_script.yaml`
         * Click **Create Script** from the imported blueprint.
     
-    3. **Critical:** The `glados_cortex.yaml` is pre-configured to look for a script with this exact ID, `script.music_assistant_voice_control`, to execute `intent="MUSIC"` requests.
+    3. ***CRITICAL:*** The `glados_cortex.yaml` is pre-configured to look for a script with this exact ID, `script.music_assistant_voice_control`, to execute `intent="MUSIC"` requests.
 
 ---
 
 * **7. The Logic Triad:** Lightbulbs should have `PowerOnState` set to `Previous` within HA to support **Null State Logic**.
-    Why:
+
+  Why:
     
     1. This ensures that when GLaDOS sends a "naked" turn-on command, the bulb uses its internal memory to restore its last state rather than resetting to a 100% white flashbang. It also prevents a "turn off" command from causing a flashbang (a millisecond of 100% white, before turning off from 10% red).
     
