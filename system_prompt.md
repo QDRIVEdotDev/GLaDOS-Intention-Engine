@@ -154,9 +154,11 @@ Before deploying the "Brain" yourself, ensure the following infrastructure is ac
 
 4. **The Weather Satellite:** Use the **File Editor** or **Studio Code Server** addon to paste the YAML from `config/weather_satellite.yaml` into your `configuration.yaml`.
 
-5. **Music Assistant Voice Script** should be installed by following the instructions included above. 
+5. **Music Assistant Voice Script** should be installed by following the instructions included above.
 
-6.  **Customize:** The information below will show you how to tailor the GLaDOS Intention Engine to your specific intentions!
+6. ***If*** using smart lightbulbs, set them to `PreviousValue` or the equivalent.
+
+7.  **Customize:** The information below will show you how to tailor the GLaDOS Intention Engine to your specific intentions!
       (that's the fun part)
 
 
