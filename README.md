@@ -44,7 +44,7 @@ The GLaDOS Intention Engine utilizes a modular architecture to turn the 8B param
 
 Before deploying the "Brain" yourself, ensure the following infrastructure is active within your facility:
 
-* **The Spirit (Local LLM):** Llama 3.1 8B running via Ollama.
+* **The Spirit (Local LLM):** Llama 3.1 8B running via Ollama. (12gb VRAM recommended minimum)
 
 * **The Senses (Networking):**
     * **Hypervisor:** Home Assistant (HAOS) running on KVM/QEMU.
@@ -57,6 +57,27 @@ Before deploying the "Brain" yourself, ensure the following infrastructure is ac
     * **Extended OpenAI Conversation** (via HACS).
     * **Whisper** (STT) & **Piper** (TTS).
     * **Music Assistant** (Voice Support Blueprint).
+
+---
+
+### 📥 TLDR Implementation Instructions (ULTRA SIMPLIFIED VERSION)
+
+1. **System Prompt:** Copy the prompt within [system_prompt.md](system_prompt.md) (starting at `IDENTITY`, and ending after the `FINAL SYSTEM CHECK` line) into the "Prompt Template" box of your **Extended OpenAI Conversation addon.**
+
+2. **Function Block:** Copy the `EXTENDED OPENAI CONVERSATION FUNCTIONS` block at the bottom of [system_prompt.md](system_prompt.md) into the "Functions" box of your **Extended OpenAI Conversation addon.**
+
+3. **The Cortex:** Add `glados_cortex.yaml` as a script in Home Assistant to route LLM intents to your hardware.
+
+4. **The Weather Satellite:** Use the **File Editor** or **Studio Code Server** addon to paste the YAML from `config/weather_satellite.yaml` into your `configuration.yaml`.
+
+5. **Music Assistant Voice Script** should be installed by following the instructions inside [system_prompt.md](system_prompt.md).
+
+6. ***If*** using smart lightbulbs, set them to `PreviousValue` or the equivalent.
+
+7. **The Memory Module** follow the above instructions to implement a way for GLaDOS to remember basic information beyond her contextual memory in your VRAM.
+
+8.  **Customize:** The information in this repository will show you how to tailor the GLaDOS Intention Engine to your specific facility hardware!
+      (that's the fun part)
 
 ---
 
