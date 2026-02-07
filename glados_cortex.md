@@ -36,7 +36,7 @@ graph LR
 
 
 ### 🧠 The Core Logic Script
-*Copy the YAML block below and paste it into a new Script in Home Assistant. Name the script entity `script.glados_cortex`.*
+*Copy the YAML block below and paste it into a new Script in Home Assistant. Name the script entity `script.glados_cortex`. You have installed the template successfully*
 
 
 ```yaml
