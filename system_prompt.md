@@ -195,7 +195,9 @@ Each respective document in this repository includes in-depth configuration deta
 ### BELOW ARE THE CRITICAL EDITS RELEVANT TO THIS SPECIFIC DOCUMENT:
 ---
 
+
 # 🧪 CRITICAL PROTOCOL: SYSTEM PROMPT MODIFICATION GUIDE
+
 
 1. **The Brain (Prompt Update):**
 
@@ -209,7 +211,9 @@ Each respective document in this repository includes in-depth configuration deta
   
 ---
 
+
 # ⚙️ CRITICAL PROTOCOL: FUNCTION BLOCK MODIFICATION GUIDE
+
 
 2. **The Hands (Function Block):**
 
@@ -223,11 +227,11 @@ Each respective document in this repository includes in-depth configuration deta
 
 ---
 
+
 ### 🧠 CRITICAL PROTOCOL: TRAINING EXAMPLE REFINEMENT
 
 To ensure that GLaDOS operates correctly, your training examples must model the exact deterministic behavior you want to see as a result. Follow these blueprints for good training examples, and try to avoid the "neuro-toxins" that degrade her cognitive performance in the poor training examples also shown below.
 
----
 
 #### **GOOD TRAINING EXAMPLE BLUEPRINTS**
 Use these examples as "Perfect Training Data" when expanding GLaDOS's functionality. They demonstrate the correct use of clinical tone, multi-step sequential logic, and parameter isolation for new hardware intents.
