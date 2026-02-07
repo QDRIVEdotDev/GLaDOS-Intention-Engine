@@ -47,7 +47,7 @@ Before deploying the "Brain" yourself, ensure the following infrastructure is ac
 ---
 
 * **3. The Logic Core (The Cortex):** The `glados_cortex.yaml` script is how GLaDOS is able to control your facility's central nervous system.
-    1. **Purpose:** It bridges the gap between the AI's determination of your "intent" ("I want it dark") and your actual hardware (turning off lights, but no area was specified, so I'll default to the living room lights as per required protocol).
+    1. **Purpose:** It bridges the gap between the AI's determination of your intent ("I want it dark") and your actual hardware (turning off lights, but no area was specified, so I'll default to the living room lights as per required protocol).
     2. **Why It Exists:** Without the Cortex, an AI might "hallucinate" and try to control devices that don't exist. The Cortex ensures that the AI can only execute a pre-approved list of "Deterministic" commands, making the system much safer and more reliable.
     3. **How to Enable It:** * Open your Home Assistant dashboard and navigate to **Settings > Automations & Scenes > Scripts**.
         * Create a new script, switch to **YAML mode** (via the three dots in the top right), and paste the contents of the `config/glados_cortex.yaml` file from this repository.
