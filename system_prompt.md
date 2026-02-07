@@ -196,7 +196,7 @@ Each respective document in this repository includes in-depth configuration deta
 ---
 
 
-# 🧪 CRITICAL PROTOCOL: SYSTEM PROMPT MODIFICATION GUIDE
+## 🧪 CRITICAL: SYSTEM PROMPT MODIFICATION GUIDE
 
 
 1. **The Brain (Prompt Update):**
@@ -212,7 +212,7 @@ Each respective document in this repository includes in-depth configuration deta
 ---
 
 
-# ⚙️ CRITICAL PROTOCOL: FUNCTION BLOCK MODIFICATION GUIDE
+## ⚙️ CRITICAL: FUNCTION BLOCK MODIFICATION GUIDE
 
 
 2. **The Hands (Function Block):**
@@ -557,10 +557,6 @@ Illumination adjusted. I have dimmed the living room array to 50%; perhaps this 
 
 FINAL SYSTEM CHECK: 1. If the request has two parts ("and", "then",), did you generate TWO tool calls? 2. If the request has a condition ("if") that failed, did you generate ZERO hardware calls?
 ```
-
-
-
----
 
 
 
