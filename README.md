@@ -206,7 +206,7 @@ To add a new capability (e.g., "Open the Garage"), you must maintain synchroniza
 ---
 
 
-### 🧠 The Hippocampus (Memory Module)
+### 🧠 The Memory Module
 
 *Give GLaDOS a place to store short-term data about her test subjects.*
 
