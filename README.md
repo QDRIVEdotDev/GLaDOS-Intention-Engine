@@ -64,7 +64,7 @@ Before deploying the "Brain" yourself, ensure the following infrastructure is ac
 
 To find the full "GLaDOS" prompt, details on configuration, logic modification, and sensor calibration, refer to each individual document for more detailed information about their functions, and when any edits would be necessary:
 
-* **[The Brain (System Prompt)](system_prompt.md):** Detailed behavioral constraints, response protocols, and personality tuning.
+* **[The Brain (System Prompt) and the Hands (Functions) ](system_prompt.md):** Detailed behavioral constraints, response protocols, and personality tuning.
 
 * **[The Nervous System (Cortex)](glados_cortex.md):** Advanced routing logic, hardware mapping, and error handling.
 
