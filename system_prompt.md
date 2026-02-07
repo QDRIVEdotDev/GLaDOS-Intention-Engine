@@ -44,7 +44,7 @@ Before deploying the "Brain" yourself, ensure the following infrastructure is ac
    
     2. **Networking (The "br0" Bridge):** To ensure GLaDOS can "see" your entire home, the host must be configured with a **Linux Bridge (br0)**. Using a bridge instead of the default NAT (virbr0) allows the VM to exist as a peer on your local network with its own IP. This is mandatory for discovery protocols like mDNS to find your smart bulbs and media players.
     
-    3. **Hardware Passthrough:** For stable Zigbee control, pass your USB dongle (e.g., SONOFF) through to the VM using **Persistent ID Mapping** (via `/dev/serial/by-id/` or Vendor/Product ID) rather than a temporary Bus/Port address. This ensures the connection survives host reboots or hardware resets.
+    3. **Hardware Passthrough:** For stable Zigbee control, pass your USB dongle (SONOFF or otherwise) through to the VM using **Persistent ID Mapping** (via `/dev/serial/by-id/` or Vendor/Product ID) rather than a temporary Bus/Port address. This ensures the connection survives host reboots or hardware resets.
     
     4. **Distributed Audio Strategy:** Use a dedicated voice satellite (Raspberry Pi, mini PC with a USB room-mic, the HA mobile Companion App, or all three simultaneously) to issue commands. This separates the task of listening from the heavy mental work of the AI, ensuring the microphone stays smooth even when GLaDOS is busy calculating commands for multiple users.
 
