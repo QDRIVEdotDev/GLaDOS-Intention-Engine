@@ -73,7 +73,7 @@ Before deploying the "Brain" yourself, ensure the following infrastructure is ac
     4. **Whisper:** Enabling speech-to-text.
     
     5. **Piper:** Enabling text-to-speech.
-        * **Note:** To use the custom GLaDOS voice, you must use the "Empty Seat" protocol. Rename the GLaDOS files to match a voice you have *not* yet downloaded (e.g., rename `glados.onnx` to `en_US-ryan-medium.onnx`).
+        * **Note:** A recent Piper update made it more difficult to use the custom GLaDOS voice, you must currently use the "Empty Seat" protocol detailed below. Rename the GLaDOS files to match a voice you have *not* yet downloaded (e.g., rename `glados.onnx` to `en_US-ryan-medium.onnx`).
         * **Configuration:** Toggle "Update voices" **OFF** in the Piper addon configuration to prevent the system from overwriting your custom files.
         * **Access Method:** Access the share folder via your OS file explorer:
             * **Windows:** `\\YOUR_HA_IP\share`
