@@ -25,7 +25,7 @@ The GLaDOS Intention Engine (v3.1.1) utilizes a modular architecture to turn the
 
 
 
-***All of the information included below is your guide to installing the (v3.1.1) GLaDOS Intention Engine within your own home. It will also show you exactly how to customize it, too. Enjoy! But not too much, specimen.***
+***All of the information included below is your guide to installing the (v3.1.1) GLaDOS Intention Engine within your own home. It will also show you exactly how to customize it, too.***
 
 
 
