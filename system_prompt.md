@@ -4,16 +4,16 @@
 ```mermaid
 graph TD
     %% 1. INPUT LAYER
-    A[<b>1. INPUT</b><br>Satellite / Whisper<br>__________________<br><i>User Voice → Transcribe → Text String</i>]
+    A["<b>1. INPUT</b><br>Satellite / Whisper<br>__________________<br><i>User Voice → Transcribe → Text String</i>"]
     
     %% 2. COGNITION LAYER
-    B[<b>2. COGNITION</b><br>Local LLM (8B)<br>__________________<br><b>Classify:</b> Command vs. Conversation<br><b>Tool Invocation:</b> Validate & Apply ExecuteProtocol<br><b>Serialize:</b> Generate JSON Payload]
+    B["<b>2. COGNITION</b><br>Local LLM (8B)<br>__________________<br><b>Classify:</b> Command vs. Conversation<br><b>Tool Invocation:</b> Validate & Apply ExecuteProtocol<br><b>Serialize:</b> Generate JSON Payload"]
     
     %% 3. CORTEX LAYER
-    C[<b>3. CORTEX</b><br>Home Assistant<br>__________________<br><b>Interpret:</b> Match JSON to Device ID<br><b>Trigger:</b> Fire Zigbee / Script / Wi-Fi<br><b>Acknowledge:</b> Sync Status to Persona]
+    C["<b>3. CORTEX</b><br>Home Assistant<br>__________________<br><b>Interpret:</b> Match JSON to Device ID<br><b>Trigger:</b> Fire Zigbee / Script / Wi-Fi<br><b>Acknowledge:</b> Sync Status to Persona"]
     
     %% 4. ACTUATION LAYER
-    D[<b>4. ACTUATION LAYER</b><br>Facility Hardware<br>__________________<br><b>Action:</b> Physical State Change<br><i>Lights, Climate, Security</i>]
+    D["<b>4. ACTUATION LAYER</b><br>Facility Hardware<br>__________________<br><b>Action:</b> Physical State Change<br><i>Lights, Climate, Security</i>"]
 
     %% Connections
     A --> B
@@ -26,7 +26,6 @@ graph TD
     style C fill:#232323,stroke:#fff,stroke-width:2px,color:#fff
     style D fill:#232323,stroke:#fff,stroke-width:2px,color:#fff
 ```
-
 
 ### Model Performance
 The current iteration of the GLaDOS Intention Engine (v3.1.1) is designed to push the functional ceiling of 8B-parameter models. While Llama 3.1 8B is highly capable, it requires strict logic boundaries to maintain very near "zero-hallucination" reliability in a production ready, locally-hosted, and privately secured smart-home environment that utilizes affordable, consumer-grade hardware.
