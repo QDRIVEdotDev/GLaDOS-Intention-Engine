@@ -70,9 +70,9 @@ The GLaDOS Intention Engine utilizes a modular architecture to turn the 8B param
 
 Before deploying the "Brain" yourself, ensure the following infrastructure is active within your facility:
 
-* **The Spirit (Local LLM):** Llama 3.1 8B running via Ollama. (12gb VRAM recommended minimum)
+* **Local LLM:** Llama 3.1 8B running via Ollama. (12gb VRAM recommended minimum)
 
-* **The Senses (Networking):**
+* **Networking:**
     * **Hypervisor:** Home Assistant (HAOS) running on KVM/QEMU.
     * **Linux Bridge (br0):** Mandatory for mDNS and device discovery.
     * **Hardware Passthrough:** Persistent ID mapping for Zigbee dongles.
