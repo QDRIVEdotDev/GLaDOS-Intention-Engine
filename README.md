@@ -62,7 +62,7 @@ INCOMING MODULES (V3.2, AND v4.0): Optional sensors to "plug in" to 'configurati
 
 ### 🧠 The Scaling Strategy
 
-The GLaDOS Intention Engine utilizes a modular architecture to turn the 8B parameter ceiling into a structural advantage. By offloading logic validation to the **Cortex** layer, reliability becomes a product of deliberate user configuration rather than raw model probability. This ensures the system functions deterministically for your unique purpose today, while creating a resilient foundation that is ready to scale immediately should higher compute resources become available.
+The v3.1.1 Intention Engine utilizes a modular architecture to turn the 8B parameter ceiling into a structural advantage while wearing a GLaDOS themed persona. By offloading logic validation to the **Cortex** layer, reliability becomes a product of deliberate user configuration rather than raw model probability. This ensures the system functions deterministically for your unique purpose today, while creating a resilient foundation that is ready to scale immediately should higher compute resources become available.
 
 ---
 
