@@ -40,6 +40,7 @@ graph TD
 
 
 NOTE: v3.1.1 will soon be updated and ironically labelled as a "Legacy" release v3.2. 
+
 Simultaneuosly, **v4.0 Arrives!** which will include a custom fine-tuned LLM, trained from Llama 3.1:8B-Instruct. v4.0 will ALSO inlude the initial release of the "Dataset Studio". A system that allows users to configure their own intents, and generate their own custom datasets to train their own personalized "Intention Engines". Stay tuned! 
 
 
