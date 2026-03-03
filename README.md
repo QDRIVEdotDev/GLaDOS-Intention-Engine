@@ -5,8 +5,7 @@
 The **Intention Engine** is a local-first, modular intelligence layer designed to bridge the gap between *abstract LLM intent* and *reliable, consistent, smart-home execution.* 
 
 Built specifically to push the functional ceiling of the **Llama 3.1 8B** model, it uses a deterministic "Cortex" to ensure that the AI's persona remains perfectly cynical while its hardware execution remains perfectly reliable.
-
-NOTE: v3.1.1 will soon be migrated to a "Legacy" release, and be replaced by v4.0 which will include a custom fine-tuned LLM, trained from Llama 3.1:8B-Instruct. v4.0 will ALSO inlude the initial release of the "Dataset Studio" that allows users to configure their own intents, and generate accurate datasets to train their own customized "Intention Engines". Stay tuned!   
+   
 ---
 
 ### 🧬 System Architecture
@@ -36,6 +35,29 @@ graph TD
     style C fill:#232323,stroke:#fff,stroke-width:2px,color:#fff
     style D fill:#232323,stroke:#fff,stroke-width:2px,color:#fff
 ```
+
+---
+
+
+NOTE: v3.1.1 will soon be updated and ironically labelled as a "Legacy" release v3.2. 
+Simultaneuosly, **v4.0 Arrives!** which will include a custom fine-tuned LLM, trained from Llama 3.1:8B-Instruct. v4.0 will ALSO inlude the initial release of the "Dataset Studio". A system that allows users to configure their own intents, and generate their own custom datasets to train their own personalized "Intention Engines". Stay tuned! 
+
+
+**Incoming v3.2:** Users who don't want to use/cannot train their own Intention Engines, do not worry. 
+
+    v3.2 of the "Intention Engine" will rely on brute-force prompt engineering to be compatible with base Llama     3.1:8B (same method as v3.1.1). 
+
+    HOWEVER: v3.2 is perfectly viable for people who use base Llama 3.1:8B. It has been designed to function as     reliably as it can without fine-tuning. The only major of issue with v3.2 is the paradox of prompt              engineering. a LARGE prompt that "teaches" the LLM how to act each turn, so you'll need to raise the models     context limit to 8192 to prevent failures if you map out this many intents.
+
+NEW FEATURES (v3.2, AND v4.0): Updated weather sensors within 'configuration.yaml'. Model has awareness of daily/hourly/weekly weather conditions. Includes weather advisories, driving conditions, and conditional command execution logic.
+
+INCOMING MODULES (V3.2, AND v4.0): Optional sensors to "plug in" to 'configuration.yaml'. 
+
+    1. A security system (utilizing a combo of: Frigate, Moondream LLM for visual analysis, LLM Vision HACS            integration, and sensors from 'configuration.yaml'). 
+    2. A 'BirdNET-GO' Integration that reports detections, daily/weekly bird stats right to your dashboard.
+
+
+---    
 
 ### 🧠 The Scaling Strategy
 
