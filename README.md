@@ -50,11 +50,11 @@ Simultaneuosly, **v4.0 Arrives!** which will include a custom fine-tuned LLM, tr
 
    - HOWEVER: v3.2 is perfectly viable for people who use base Llama 3.1:8B. It has been designed to function as reliably as it can without fine-tuning. The only major of issue with v3.2 is the paradox of prompt engineering - A LARGE prompt that "teaches" the LLM how to act each turn. So you'll need to raise the models context limit to 8192 to prevent failures if you map out this many intents.
 
-NEW FEATURES (v3.2, AND v4.0): Updated weather sensors within 'configuration.yaml'. Model has awareness of daily/hourly/weekly weather conditions. Includes weather advisories, driving conditions, and conditional command execution logic.
+**NEW FEATURES (v3.2, AND v4.0):** Updated weather sensors within 'configuration.yaml'. Model has awareness of daily/hourly/weekly weather conditions. Includes weather advisories, driving conditions, and conditional command execution logic.
 
-NEW FEATURES (Exclusive to v4.0): Essentially a full overhaul, and virtually 100% functional reliability. No longer persona-stagnant with GLaDOS, a simple "identity" snippet can be swapped in the system prompt to have the Intention Engine take on ANY personality you want. A Dataset Studio will be available if you wish customize and train your own Intention Engine to do whatever you need around the house. 
+**NEW FEATURES (Exclusive to v4.0):** Essentially a full overhaul, and virtually 100% functional reliability. No longer persona-stagnant with GLaDOS, a simple "identity" snippet can be swapped in the system prompt to have the Intention Engine take on ANY personality you want. A Dataset Studio will be available if you wish customize and train your own Intention Engine to do whatever you need around the house. 
 
-INCOMING MODULES (V3.2, AND v4.0): Optional sensors to "plug in" to 'configuration.yaml'. 
+**INCOMING MODULES (V3.2, AND v4.0):** Optional sensors to "plug in" to 'configuration.yaml'. 
 
     1. A security system (utilizing a combo of: Frigate, Moondream LLM for visual analysis, LLM Vision HACS integration, and sensors from 'configuration.yaml'). 
     2. A 'BirdNET-GO' Integration that reports detections, daily/weekly bird stats right to your dashboard, and allows your Intention Engine to tell ya what critters are flying by.
