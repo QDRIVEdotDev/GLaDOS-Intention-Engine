@@ -47,7 +47,7 @@ Simultaneuosly, **v4.0 Arrives!** which will include a custom fine-tuned LLM, tr
 
    - v3.2 of the "Intention Engine" will rely on brute-force prompt engineering to be compatible with base Llama     3.1:8B (same method as v3.1.1). 
 
-    - HOWEVER: v3.2 is perfectly viable for people who use base Llama 3.1:8B. It has been designed to function as reliably as it can without fine-tuning. The only major of issue with v3.2 is the paradox of prompt engineering - A LARGE prompt that "teaches" the LLM how to act each turn. So you'll need to raise the models context limit to 8192 to prevent failures if you map out this many intents.
+   - HOWEVER: v3.2 is perfectly viable for people who use base Llama 3.1:8B. It has been designed to function as reliably as it can without fine-tuning. The only major of issue with v3.2 is the paradox of prompt engineering - A LARGE prompt that "teaches" the LLM how to act each turn. So you'll need to raise the models context limit to 8192 to prevent failures if you map out this many intents.
 
 NEW FEATURES (v3.2, AND v4.0): Updated weather sensors within 'configuration.yaml'. Model has awareness of daily/hourly/weekly weather conditions. Includes weather advisories, driving conditions, and conditional command execution logic.
 
